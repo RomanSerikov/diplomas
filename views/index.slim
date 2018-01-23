@@ -3,19 +3,22 @@ html lang="en"
   head
     meta charset="utf-8"
     title Diplomas generator
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
     
   body
-    h1 Hello World!
+    .container
+      .row
+        .col-md-8
+          h2 Hello! 
+          h3 Please, enter a valid github url. I will generate diplomas for you.
 
-    form action="/create" method="post"
-      
-      .form-group
-        label Owner
-        input name="owner" type="text"
+      .row
+        .col-md-4
+          form action="/create" method="post"
+            
+            .form-group
+              label Github repo url
+              input name="github_url" type="text" class="form-control"
 
-      .form-group
-        label Repo
-        input name="repo" type="text"
-
-      .actions
-        input type="submit" value="Send"
+            .actions
+              input type="submit" value="Generate" class="btn btn-primary"
