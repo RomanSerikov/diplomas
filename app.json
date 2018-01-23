@@ -1,0 +1,7 @@
+{
+  "name": "Diplomas",
+  "description": "Test app for pdf diplomas generation",
+  "repository": "https://github.com/RomanSerikov/diplomas",
+  "keywords": ["ruby", "sinatra", "docker"],
+  "website": "https://glacial-river-78291.herokuapp.com"
+}
