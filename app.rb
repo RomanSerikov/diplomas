@@ -11,8 +11,9 @@ get '/' do
 end
 
 post '/create' do
-  @owner = params[:owner]
-  @repo  = params[:repo]
+  @uri = params[:github_url].split('/')
+  @owner = @uri[-2]
+  @repo  = @uri[-1]
 
   @github_response = ApiRequest.new(@owner, @repo).make
   Pdf.new(@github_response).create!
